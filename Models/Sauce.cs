@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ContosoPizza.Models;
 
+[Table("Sauces")]
 public class Sauce
 {
 
