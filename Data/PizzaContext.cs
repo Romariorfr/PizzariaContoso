@@ -11,6 +11,8 @@ namespace ContosoPizza.Data
         }
 
         public DbSet<Pizza> Pizzas { get; set; }
+        public DbSet<Topping> Toppings { get; set; }
+        public DbSet<Sauce> Sauces { get; set; }
 
     }
 }
