@@ -4,9 +4,11 @@ namespace ContosoPizza.Models;
 
 public class Topping
 {
+
+    public int Id { get; set; }
+
     [Required]
     [MaxLength(100)]
-    public int Id { get; set; }
     public string? Name { get; set; }
 
     public decimal Calories { get; set; }

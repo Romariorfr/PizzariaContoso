@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using ContosoPizza.Data;
 using ContosoPizza.Services;
 // Additional using declarations
@@ -14,6 +15,9 @@ builder.Services.AddSqlite<PizzaContext>("Data Source=ContosoPizza.db");
 // Add the PromotionsContext
 
 builder.Services.AddScoped<PizzaService>();
+
+builder.Services.AddControllers().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
 
 var app = builder.Build();
 
